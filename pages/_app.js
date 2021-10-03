@@ -1,7 +1,13 @@
-import '@styles/globals.css'
+import Navigation from "../Components/Navigation";
+import { appWithTranslation } from "next-i18next";
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Navigation />
+    </>
+  );
 }
 
-export default Application
+export default appWithTranslation(MyApp);
